@@ -18,7 +18,7 @@ function App() {
         alert("Preencha todas as informações")
         return
     }
-    // Verificar se ja m id ativo,caso positivo então é uma edição
+    // Verificar se ja id venha preenchido,caso positivo então é uma edição
     if(id){ 
       const copiaListaItem = [... listaItem];
 
@@ -28,11 +28,22 @@ function App() {
       copiaListaItem[index].categoria = categoria
       copiaListaItem[index].data = data
       copiaListaItem[index].descricao = descricao
-      
+      console.log(copiaListaItem)
+      setTitulo(copiaListaItem[index].titulo)
+      setCategoria(copiaListaItem[index].categoria)
+      SetData(copiaListaItem[index].data)
+      setDescricao(copiaListaItem[index].descricao)
+      setId("")
+      setTitulo("")
+      setCategoria("")
+      SetData("")
+      setDescricao("")
+
+
 
     }else{
       setListaItem([...listaItem , {
-        id: Date.now,
+        id: Date.now(),
         titulo : titulo,
         categoria : categoria,
         data : data,
@@ -94,7 +105,7 @@ function App() {
       {listaItem.map((item)=>
         <li key={item.id}>
           <p>
-            {item.titulo} - {item.categoria} - {item.data} - {item.descricao} 
+           {item.titulo} - {item.categoria} - {item.data} - {item.descricao} 
             <button onClick={()=> editarItem(item)}>Editar</button>
             <button onClick={()=> apagarItem(item.id)}>Apagar</button>
           </p>
