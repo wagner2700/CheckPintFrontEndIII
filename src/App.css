@@ -1,42 +1,123 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.Main{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+body{
+  background-color: #102766;
+  display: flex;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 27%;
+  height: 50%;
+  border-radius: 5px;
+  margin: 3%;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
 }
 
-.card {
-  padding: 2em;
+input{
+  width: 70%;
+  height: 20px;
+  color: #545454;
+  background-color: white;
+  border-top: none ;
+  border-right: none;
+  border-left: none;
+  margin-left: 35px;
 }
 
-.read-the-docs {
-  color: #888;
+
+select{
+  width: 70%;
+  height: 20px;
+  color: #545454;
+  background-color: white;
+  border-top: none ;
+  border-right: none;
+  border-left: none;
+  margin-left: 35px;
+}
+.tituloForm{
+  color: black;
+}
+
+.Cards{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  height: 12px;
+  font-style: normal;
+  margin-left :20px;
+}
+
+li{
+  display: flex;
+  border: 1px solid #C7C4C4;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  
+}
+
+
+
+.titulo1{
+  gap : 0px;
+  margin: 0px;
+}
+
+h4{
+  color:black;
+  margin : 10px
+}
+
+ul{
+ margin: 10px;
+}
+
+.Button{
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+  height: 20px;
+  width:  50px;
+}
+h2{
+  display: flex;
+  justify-content: center;
 }

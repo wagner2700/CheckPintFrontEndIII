@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import "./assets/Vector (Stroke).png"
 
 function App() {
     const[id , setId] = useState("")
@@ -77,42 +78,47 @@ function App() {
 
 
   return (
+    <div className='Main'>
     <div className="App">
       <form onSubmit={addItem}>
-
+      <h2 className='tituloForm'>Cadastrar Tarefa</h2>
       <input value={titulo}  onChange = {(event)=>setTitulo(event.target.value)} placeholder="Titulo"/>
-      <br />
-      <br />
+      
       <select value={categoria}  onChange = {(event)=>setCategoria(event.target.value)} placeholder="Categoria"> 
         <option value = "">Selecione uma opção</option>
-        <option value = "T">Trabalho"</option>
-        <option value = "L">Lazer</option>
-        <option value = "P">Prioridade</option>
-        <option value = "O">Outros</option>
+        <option value = "Trabalho">Trabalho"</option>
+        <option value = "Trabalho">Lazer</option>
+        <option value = "Prioridade">Prioridade</option>
+        <option value = "Outros">Outros</option>
       </select>  
-     <br />
-      <br />
+     
+ 
       <input value={data} type="date"  onChange = {(event)=>SetData(event.target.value)} placeholder="Data"/>
-      <br />
-      <br />
+  
       <input value={descricao} onChange = {(event)=>setDescricao(event.target.value)} placeholder="Descrição"/>
-      <br />
-      <br />
-      <input type ="Submit" value={id? "Salvar" : "Cadastrar"} />
+      <input className='cadastrar' type ="Submit" value={id? "Salvar" : "Cadastrar"} />
       </form>
+     
+    </div>
+    <div className='Cards'>
+        <ul>
+        {listaItem.map((item)=>
+          <li key={item.id}>
+            
+              <div className='titulo1'>
+                <h4>{item.titulo}</h4> <p>{item.categoria} </p>  <p>{item.descricao} </p>
+                </div>
+              <div className='Button'>
+               <h4>{item.data}</h4>  
+                <img src="./assets/Vector (Stroke).png" onClick={()=> editarItem(item)} alt="" />
+                <button onClick={()=> editarItem(item)}>Editar</button>
+                <button onClick={()=> apagarItem(item.id)}>Apagar</button>
+              </div>
+            
+          </li>)}
       
-    <ul>
-      {listaItem.map((item)=>
-        <li key={item.id}>
-          <p>
-           {item.titulo} - {item.categoria} - {item.data} - {item.descricao} 
-            <button onClick={()=> editarItem(item)}>Editar</button>
-            <button onClick={()=> apagarItem(item.id)}>Apagar</button>
-          </p>
-        </li>)}
-      
-    </ul>
-
+      </ul>
+    </div> 
     </div>
   )
 }
