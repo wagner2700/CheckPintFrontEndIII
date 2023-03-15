@@ -10,6 +10,7 @@ function App() {
     const[data,SetData] = useState ("")
     const[descricao , setDescricao] = useState ("")
     const [listaItem,setListaItem] = useState([])
+    const [qtdItens , setQtdItens] = useState (0)
     
     // funcção para add item
     function addItem(event){
@@ -54,6 +55,7 @@ function App() {
       setCategoria("")
       SetData("")
       setDescricao("")
+      setQtdItens(qtdItens  +1 )
     
     }
 
@@ -82,11 +84,12 @@ function App() {
     <div className="App">
       <form onSubmit={addItem}>
       <h2 className='tituloForm'>Cadastrar Tarefa</h2>
+     
       <input value={titulo}  onChange = {(event)=>setTitulo(event.target.value)} placeholder="Titulo"/>
       
       <select value={categoria}  onChange = {(event)=>setCategoria(event.target.value)} placeholder="Categoria"> 
         <option value = "">Selecione uma opção</option>
-        <option value = "Trabalho">Trabalho"</option>
+        <option value = "Trabalho">Trabalho</option>
         <option value = "Lazer">Lazer</option>
         <option value = "Prioridade">Prioridade</option>
         <option value = "Outros">Outros</option>
@@ -101,7 +104,12 @@ function App() {
      
     </div>
     <div className='Cards'>
+      <div className='cabecalho'>
         <h3>Lista de Tarefas</h3>
+        <p> Total : {qtdItens} tarefas</p>
+      </div>
+        
+        
         <ul>
         {listaItem.map((item)=>
           <li key={item.id}>

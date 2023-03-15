@@ -129,7 +129,9 @@ h2{
 }
 
 h3{
-  color: #343434;;
+  color: #343434;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .cadastrar{
@@ -155,4 +157,17 @@ h3{
   width: 40%;
   margin: 0x;
   margin-top: 10px;
+}
+
+.cabecalho{
+  width: 94%;
+  display: flex;
+  padding-left: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho p {
+font-weight: 400;
+font-size: 16px;
 }
