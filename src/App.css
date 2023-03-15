@@ -101,6 +101,7 @@ h4{
   color:#343434;
   margin: 0px;
   margin-left : 10px;
+  margin-right : 10px;
   margin-top : 10px
 }
 
@@ -127,6 +128,10 @@ h2{
   color:#343434;
 }
 
+h3{
+  color: #343434;;
+}
+
 .cadastrar{
   width: 80%px;
   height: 40px;
@@ -139,4 +144,15 @@ h2{
 .categoria{
   color: #343434;
   
+}
+
+.apagarOuEditar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.apagarOuEditar img{
+  width: 40%;
+  margin: 0x;
+  margin-top: 10px;
 }

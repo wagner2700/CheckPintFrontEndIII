@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import "./assets/Vector (Stroke).png"
+import editar from "./assets/magem1.png"
+import apagar from "./assets/apagar.png"
 
 function App() {
     const[id , setId] = useState("")
@@ -101,6 +101,7 @@ function App() {
      
     </div>
     <div className='Cards'>
+        <h3>Lista de Tarefas</h3>
         <ul>
         {listaItem.map((item)=>
           <li key={item.id}>
@@ -109,10 +110,13 @@ function App() {
                 <h4>{item.titulo}</h4> <p className='categoria'>{item.categoria} </p>  <p>{item.descricao} </p>
                 </div>
               <div className='Button'>
-               <h4>{item.data}</h4>  
-                <img src="./assets/Vector (Stroke).png" onClick={()=> editarItem(item)} alt="" />
-                <button onClick={()=> editarItem(item)}>Editar</button>
-                <button onClick={()=> apagarItem(item.id)}>Apagar</button>
+               <h4>{item.data}</h4> 
+               <div className='apagarOuEditar'>
+               <img src={editar} onClick={()=> editarItem(item)} alt="Editar" />
+               <img src={apagar} onClick={()=> apagarItem(item.id)} alt="Apagar" />
+               </div> 
+                {/*<button onClick={()=> editarItem(item)}>Editar</button>
+                <button onClick={()=> apagarItem(item.id)}>Apagar</button>*/}
               </div>
             
           </li>)}
