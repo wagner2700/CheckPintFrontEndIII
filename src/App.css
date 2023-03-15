@@ -70,10 +70,11 @@ select{
 p {
   display: flex;
   justify-content: space-between;
-  color: black;
+  color: #343434;
   height: 12px;
   font-style: normal;
-  margin-left :20px;
+  margin-left :10px;
+  margin-top: 0px;
 }
 
 li{
@@ -97,8 +98,10 @@ li{
 }
 
 h4{
-  color:black;
-  margin : 10px
+  color:#343434;
+  margin: 0px;
+  margin-left : 10px;
+  margin-top : 10px
 }
 
 ul{
@@ -111,6 +114,7 @@ ul{
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-right: 10px;
 }
 
 button{
@@ -120,4 +124,19 @@ button{
 h2{
   display: flex;
   justify-content: center;
+  color:#343434;
+}
+
+.cadastrar{
+  width: 80%px;
+  height: 40px;
+  background: #E84118;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.categoria{
+  color: #343434;
+  
 }

@@ -87,7 +87,7 @@ function App() {
       <select value={categoria}  onChange = {(event)=>setCategoria(event.target.value)} placeholder="Categoria"> 
         <option value = "">Selecione uma opção</option>
         <option value = "Trabalho">Trabalho"</option>
-        <option value = "Trabalho">Lazer</option>
+        <option value = "Lazer">Lazer</option>
         <option value = "Prioridade">Prioridade</option>
         <option value = "Outros">Outros</option>
       </select>  
@@ -106,7 +106,7 @@ function App() {
           <li key={item.id}>
             
               <div className='titulo1'>
-                <h4>{item.titulo}</h4> <p>{item.categoria} </p>  <p>{item.descricao} </p>
+                <h4>{item.titulo}</h4> <p className='categoria'>{item.categoria} </p>  <p>{item.descricao} </p>
                 </div>
               <div className='Button'>
                <h4>{item.data}</h4>  
